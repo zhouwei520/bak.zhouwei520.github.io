@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="蜀道难，难于上青天微服务架构可不是打嘴炮，它实打实地考验一个公司的综合技术实力，这不仅关乎架构层面的技术选型，团队成员对微服务体系的理解也决定着微服务化在执行层面的深度，而这套架构后面各个组件的线上部署维护也需要强大的运维能力。 所以说，在项目中应用微服务架构可谓是蜀道艰险，青天没上成，可能先去了西天。 架构师是一个很神奇的职业，为什么这么说呢，因为我工作中遇到的架构师，不夸张的说，80%都是P">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-21T09:51:33.834Z">
+<meta property="og:updated_time" content="2019-11-22T01:11:35.440Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -177,6 +177,8 @@
 <p>所以说，在项目中应用微服务架构可谓是蜀道艰险，青天没上成，可能先去了西天。</p>
 <p>架构师是一个很神奇的职业，为什么这么说呢，因为我工作中遇到的架构师，不夸张的说，80%都是PPT架构师，除了会写PPT以外没多大本事。脱离一线过久，代码是写不来了这辈子不会再碰代码的，技术栈跟不上时代发展，架构脱离实际业务，没有落地能力。</p>
 <p>微服务架构的落地是要亲身躬行，靠实践经验的积累才能做好的。接下来我们看一看在微服务改造的过程中，需要我们去攻克的技术难点。</p>
+<a id="more"></a>
+
 <h3 id="一道道的沟沟坎坎"><a href="#一道道的沟沟坎坎" class="headerlink" title="  一道道的沟沟坎坎"></a><h3>  一道道的沟沟坎坎</h3></h3><h3 id="服务治理和负载均衡"><a href="#服务治理和负载均衡" class="headerlink" title="服务治理和负载均衡"></a><h4>服务治理和负载均衡</h4></h3><p>微服务架构广泛应用在超高并发系统中，中后台服务集群的规模着实不小。就拿淘系的下单接口来说，一个下单指令要调用近二十个后台微服务协同完成任务（可能现在更多了），而在双11这类业务场景下，核心链路的一个微服务背后的虚机数量都有近万台。</p>
 <p>因此，服务与服务之间的调用，就成了微服务架构需要解决的第一个问题。与此同时，大规模集群中虚机的上线下线是每天的日常任务，集群的扩容缩容也很常见，我们的微服务架构需要探知到集群中各个服务节点的状态变化，这样就知道哪些节点是可以正常提供服务的。我们管这个领域叫做<strong>服务治理</strong> </p>
 <p>与服务治理搭档的还有负载均衡，面对茫茫多的服务器，如何将海量用户请求分发到不同的机器。考虑到有的机器性能比较弱，或者机房带宽不大，网络响应慢，如何根据实际情况动态地分发服务请求？这个领域就是<strong>负载均衡</strong>需要解决的事情。</p>
@@ -298,11 +300,15 @@
   
 <nav id="article-nav">
   
-  
-    <a href="/2019/11/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
+    <a href="/2019/11/22/%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E8%BF%9B%E9%98%B6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          程序猿如何快速进阶
+        
+      </div>
     </a>
+  
   
 </nav>
 
